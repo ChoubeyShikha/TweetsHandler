@@ -23,7 +23,7 @@ export class AppComponent{
 
     this.dialog.open(AddHandlerComponent, dialogConfig);
 
-    let dialogRef = this.dialog.open(AddHandlerComponent, dialogConfig);
+    // let dialogRef = this.dialog.open(AddHandlerComponent, dialogConfig);
 
     // dialogRef.afterClosed().subscribe();  
     

@@ -30,11 +30,25 @@ export class RightPanelComponent implements OnInit {
 
   reloadGraph(graphXAxix, graphYAxix) {
     this.chartOptions = {
+      responsive: true,
       scales: {
+        xAxes: [ {
+          scaleLabel: {
+            display: true,
+            labelString: 'Handle on each Date'
+          },
+        } ],
         yAxes: [{
             ticks: {
-                beginAtZero: true
-            }
+                beginAtZero: true,
+                min: 0,
+                max: 10,
+                stepSize: 1
+            },
+            scaleLabel: {
+            display: true,
+            labelString: 'Number of times on each Date'
+          }
         }]
       }
     };

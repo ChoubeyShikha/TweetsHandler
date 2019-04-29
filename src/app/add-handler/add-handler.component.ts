@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import {FormGroup, FormControl } from '@angular/forms';
+import {FormGroup, FormControl, Validators } from '@angular/forms';
 import { NewService } from '../new.service';
 
 @Component({
@@ -24,9 +24,9 @@ export class AddHandlerComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      heading : new FormControl(''),
-      description:new FormControl(''),
-      date: new FormControl('')
+      heading : new FormControl('', [Validators.required]),
+      description:new FormControl('', [Validators.required]),
+      date: new FormControl('', [Validators.required])
     });
   }
 
@@ -38,12 +38,14 @@ export class AddHandlerComponent implements OnInit {
       date: this.dateFormat
     };
     this.newSrv.setData(this.myData);
-    this.dialogRef.close();
+
+    if(this.myData){
+      this.dialogRef.close();
+    }
   }
 
-close() {
+  close() {
     this.dialogRef.close();
-
-}
+  }
 
 }

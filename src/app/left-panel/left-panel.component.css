@@ -2,10 +2,12 @@
     width: 100%;
     margin-bottom: 10px;
     height: 473px;
+    overflow-y: auto;
 }
 
 .grid {
     width: 100%;
+    height: 56px;
 }
 
 .handlesData {
