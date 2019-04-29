@@ -1,0 +1,56 @@
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    margin: 0;
+    height: 80px;
+    background-color: gray;
+}
+
+.appName {
+    float: left;
+    margin-top: 25px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    justify-content: center;
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+}
+
+.addHandler{
+    float: right;
+    margin-top: 25px;
+    margin-right: 70px;
+    margin-bottom: 10px;
+    justify-content: center;
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+}
+
+.compoContaining {
+    height: cal(100-80px);
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.leftpanel{
+    width: 49%;
+    background-color: white;
+    float: left;
+    height: auto;
+    border: 1px;
+    border-style: solid;
+}
+.rightpanel {
+    width: 50%;
+    float: right;
+    background-color: white;
+    height: auto;
+    border: 1px;
+    border-style: solid;
+}
